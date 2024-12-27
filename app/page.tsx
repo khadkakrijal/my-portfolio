@@ -7,10 +7,10 @@ import { FaArrowDown, FaArrowRight, FaDownload } from 'react-icons/fa';
 export default function Home() {
   return (
     <MasterLayout>
-      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-400 via-slate-500 to-slate-600 overflow-hidden">
-        <div className="w-full h-full flex">
+      <div className="w-full md:h-full md:-mt-0 -mt-[90px] flex items-center justify-center bg-gradient-to-br from-slate-400 via-slate-500 to-slate-600 overflow-hidden">
+        <div className="w-full md:h-full md:flex md:flex-row flex flex-col-reverse ">
           {/* Left Section */}
-          <div className="w-1/2 flex flex-col gap-5 justify-center items-center text-white p-6">
+          <div className="md:w-1/2 flex flex-col gap-5 justify-center items-center text-white md:p-6 relative">
             <h1 className="text-4xl font-extrabold uppercase wave-gradient-animation">
               Krijal Khadka
             </h1>
@@ -45,8 +45,8 @@ export default function Home() {
                 -webkit-text-fill-color: transparent;
               }
             `}</style>
-            <div className="text-center">
-              <h2 className="text-lg font-semibold uppercase">
+            <div className="text-center space-y-2">
+              <h2 className="text-lg font-semibold uppercase md:flex md:flex-row flex flex-col justify-center items-center md:gap-2 gap-1">
                 Full-Stack Developer{' '}
                 <span className="text-sm font-light">
                   (React.js, Next.js, Node.js, Express.js)
@@ -67,7 +67,7 @@ export default function Home() {
             {/* About Me Button */}
             <Link
               href="/about"
-              className="relative group flex items-center gap-3 px-6 py-3 text-l font-bold uppercase text-white bg-blue-600 rounded-full overflow-hidden"
+              className="relative group flex justify-center items-center md:ml-0 ml-7 gap-3 w-[230px] py-3 text-l font-bold uppercase text-white bg-blue-600 rounded-full overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
               <span className="relative z-10 uppercase">About Me</span>
@@ -76,13 +76,13 @@ export default function Home() {
 
             {/* Download Resume Button */}
 
-            <div className="absolute fixed bottom-5">
+            <div className="absolute fixed md:block  md:bottom-5 md:-bottom-0 -bottom-20 pb-2 md:flex md:flex-col flex flex-row justify-center items-center md:gap-o gap-2">
               <div className="relative flex flex-col items-center">
-                <FaArrowDown className="text-white text-4xl animate-bounce" />
+                <FaArrowDown className="text-white md:text-4xl text-2xl animate-bounce" />
               </div>
               <a
                 href="#"
-                className="relative flex items-center justify-center px-6 py-3 text-l font-semibold text-white bg-blue-600 rounded-full overflow-hidden group"
+                className="relative flex items-center justify-center w-[230px] py-3 text-l font-semibold text-white bg-blue-600 rounded-full overflow-hidden group"
               >
                 <span className="z-10 uppercase"> Download Resume</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
@@ -91,8 +91,8 @@ export default function Home() {
           </div>
 
           {/* Right Section */}
-          <div className="w-1/2 flex justify-center items-center">
-            <div className="bg-white h-[450px] w-[450px] rounded-full flex justify-center items-center overflow-hidden">
+          <div className="md:w-1/2 flex justify-center items-center  md:p-0 p-6">
+            <div className="bg-white md:h-[450px] md:w-[450px] rounded-full flex justify-center items-center overflow-hidden">
               <Image
                 src="/picC.jpeg"
                 alt="Profile"
