@@ -1,7 +1,8 @@
+'use client';
 import Link from 'next/link';
 import MasterLayout from './components/masterlayout/master';
 import Image from 'next/image';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowDown, FaArrowRight, FaDownload } from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -10,16 +11,49 @@ export default function Home() {
         <div className="w-full h-full flex">
           {/* Left Section */}
           <div className="w-1/2 flex flex-col gap-5 justify-center items-center text-white p-6">
-            <h1 className="text-4xl font-extrabold uppercase">Krijal Khadka</h1>
+            <h1 className="text-4xl font-extrabold uppercase wave-gradient-animation">
+              Krijal Khadka
+            </h1>
+            <style jsx>{`
+              @keyframes wave {
+                0%,
+                100% {
+                  transform: translateY(0);
+                }
+                50% {
+                  transform: translateY(-10px);
+                }
+              }
+
+              @keyframes gradient {
+                0% {
+                  background-position: 0% 50%;
+                }
+                100% {
+                  background-position: 100% 50%;
+                }
+              }
+
+              .wave-gradient-animation {
+                display: inline-block;
+                animation:
+                  wave 2s infinite ease-in-out,
+                  gradient 5s infinite linear;
+                background: linear-gradient(90deg, white, teal, cyan, white);
+                background-size: 300% 300%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            `}</style>
             <div className="text-center">
               <h2 className="text-lg font-semibold uppercase">
                 Full-Stack Developer{' '}
                 <span className="text-sm font-light">
-                  (React.js, Next.js, Node.js)
+                  (React.js, Next.js, Node.js, Express.js)
                 </span>
               </h2>
-              <h3 className="text-lg font-medium uppercase flex justify-center items-center gap-4">
-                National Futsal Player{' '}
+              <h3 className="text-lg font-medium uppercase flex justify-center items-center gap-3">
+                National Futsal Player (2022){' '}
                 <Image
                   src="/nepal logo.jpg"
                   alt="logo"
@@ -33,13 +67,27 @@ export default function Home() {
             {/* About Me Button */}
             <Link
               href="/about"
-              className="relative flex items-center gap-3 px-6 py-3 text-lg font-bold uppercase text-white bg-blue-600 rounded-full overflow-hidden group"
+              className="relative group flex items-center gap-3 px-6 py-3 text-l font-bold uppercase text-white bg-blue-600 rounded-full overflow-hidden"
             >
-              <FaArrowRight
-                className="text-white text-xl animate-bounce-horizontal transition-transform duration-500 group-hover:translate-x-2"
-              />
-              About Me
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
+              <span className="relative z-10 uppercase">About Me</span>
+              <FaArrowRight className="relative z-10 text-white text-xl transition-transform duration-500 group-hover:translate-x-2" />
             </Link>
+
+            {/* Download Resume Button */}
+
+            <div className="absolute fixed bottom-5">
+              <div className="relative flex flex-col items-center">
+                <FaArrowDown className="text-white text-4xl animate-bounce" />
+              </div>
+              <a
+                href="#"
+                className="relative flex items-center justify-center px-6 py-3 text-l font-semibold text-white bg-blue-600 rounded-full overflow-hidden group"
+              >
+                <span className="z-10 uppercase"> Download Resume</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
+              </a>
+            </div>
           </div>
 
           {/* Right Section */}

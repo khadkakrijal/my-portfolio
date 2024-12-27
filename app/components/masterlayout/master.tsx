@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './navbar';
+import { FaFacebookMessenger } from 'react-icons/fa';
 
 const MasterLayout: React.FC<any> = ({
   children,
@@ -7,12 +8,23 @@ const MasterLayout: React.FC<any> = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="flex flex-col h-full min-h-screen">
+    <div className="flex flex-col h-full  min-h-screen">
       {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}
-      <main className="flex-grow flex h-full">{children}</main>
+      <main className="flex-grow flex mt-[80px]">{children}</main>
+      <div className="fixed bottom-5 right-2 z-50 flex items-center gap-2 bg-teal-600 text-white py-3 px-5 rounded-full shadow-lg hover:bg-teal-700 cursor-pointer transition duration-300">
+        <FaFacebookMessenger className="text-2xl" />
+        <a
+          href="https://m.me/stylishkrijal"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-lg font-medium"
+        >
+          Chat with Me
+        </a>
+      </div>
     </div>
   );
 };
