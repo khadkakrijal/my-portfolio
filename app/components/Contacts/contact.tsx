@@ -8,7 +8,7 @@ import {
   FaInstagram,
 } from 'react-icons/fa';
 
-const Contacts: React.FC<any> = () => {
+const Contacts: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen w-full">
       {/* Logo Section */}
@@ -18,7 +18,7 @@ const Contacts: React.FC<any> = () => {
         </div>
         {/* <h1 className="text-4xl font-bold uppercase text-gray-800 mt-4">Connect with Me</h1> */}
         <p className="text-lg text-gray-600 text-center mt-2">
-          Let's build something amazing together!
+          Let&apos;s build something amazing together!
         </p>
       </div>
 

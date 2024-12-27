@@ -1,17 +1,10 @@
 import React from 'react';
-import { FaFolderOpen } from 'react-icons/fa';
-
-const Projects: React.FC<any> = () => {
+const Projects: React.FC = () => {
   return (
-    <div className="p-6 bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen">
-      {/* Header Icon */}
-      <div className="flex justify-center items-center mb-12">
-        <FaFolderOpen className="text-teal-600 text-6xl" />
-      </div>
-
+    <div className="p-6 bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen ">
       {/* Frontend Projects */}
       <section className="mb-16">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 border-b-4 border-teal-500">
+        <h2 className="text-3xl text-center font-semibold text-gray-800 mb-6 border-b-4 border-teal-500">
           Frontend Development
         </h2>
         <ul className="space-y-6 text-gray-700">
@@ -123,7 +116,7 @@ const Projects: React.FC<any> = () => {
 
       {/* Backend Projects */}
       <section className="mb-16">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 border-b-4 border-teal-500">
+        <h2 className="text-3xl text-center font-semibold text-gray-800 mb-6 border-b-4 border-teal-500">
           Backend Development
         </h2>
         <ul className="space-y-6 text-gray-700">
@@ -140,7 +133,7 @@ const Projects: React.FC<any> = () => {
             <strong>Needy Store Online:</strong>
             <p>
               Utilized Supabase for backend services, including database
-              management and authentication to support the e-commerce platform's
+              management and authentication to support the e-commerce platform&apos;s
               functionalities.
             </p>
           </li>
@@ -164,7 +157,7 @@ const Projects: React.FC<any> = () => {
 
       {/* App Development Projects */}
       <section>
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 border-b-4 border-teal-500">
+        <h2 className="text-3xl text-center font-semibold text-gray-800 mb-6 border-b-4 border-teal-500">
           App Development
         </h2>
         <ul className="space-y-6 text-gray-700">

@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
-const Navbar: React.FC<any> = () => {
+const Navbar: React.FC = () => {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -68,21 +68,26 @@ const Navbar: React.FC<any> = () => {
             menuOpen ? 'block' : 'hidden'
           }`}
         >
-          {['/', '/project', '/about', '/connect'].map((path, index) => (
+          {[
+            { path: '/', label: 'home' },
+            { path: '/project', label: 'project' },
+            { path: '/about', label: 'about' },
+            { path: '/connect', label: 'Connect with Me' },
+          ].map((link, index) => (
             <div className="relative group px-4 py-2 lg:py-0" key={index}>
               <Link
-                href={path}
+                href={link.path}
                 className={`uppercase text-[15px] ${
-                  isActive(path)
+                  isActive(link.path)
                     ? 'font-bold text-violet-950'
                     : 'text-gray-500 group-hover:text-black'
                 }`}
               >
-                {path.replace('/', '') || 'home'}
+                {link.label}
               </Link>
               <div
                 className={`absolute bottom-[-5px] left-0 h-[2px] bg-violet-950 ${
-                  isActive(path) ? 'w-[100%]' : 'w-0 group-hover:w-full'
+                  isActive(link.path) ? 'w-[100%]' : 'w-0 group-hover:w-full'
                 } transition-all duration-300`}
               />
             </div>

@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import MasterLayout from './components/masterlayout/master';
 import Image from 'next/image';
-import { FaArrowDown, FaArrowRight, FaDownload } from 'react-icons/fa';
+import { FaArrowDown, FaArrowRight } from 'react-icons/fa';
 
 export default function Home() {
   return (

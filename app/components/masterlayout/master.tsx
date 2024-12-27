@@ -2,7 +2,12 @@ import React from 'react';
 import Navbar from './navbar';
 import { FaFacebookMessenger } from 'react-icons/fa';
 
-const MasterLayout: React.FC<any> = ({
+interface MasterLayoutProps {
+  children: React.ReactNode;
+}
+
+
+const MasterLayout: React.FC<MasterLayoutProps> = ({
   children,
 }: {
   children: React.ReactNode;
