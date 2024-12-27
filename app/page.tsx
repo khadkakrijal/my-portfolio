@@ -81,7 +81,8 @@ export default function Home() {
                 <FaArrowDown className="text-white md:text-4xl text-2xl animate-bounce" />
               </div>
               <a
-                href="#"
+                href="/krijal_resume.pdf"
+  download="Krijal_Khadka_Resume"
                 className="relative flex items-center justify-center w-[230px] py-3 text-l font-semibold text-white bg-blue-600 rounded-full overflow-hidden group"
               >
                 <span className="z-10 uppercase"> Download Resume</span>
