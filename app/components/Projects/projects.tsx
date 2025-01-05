@@ -9,6 +9,22 @@ const Projects: React.FC = () => {
         </h2>
         <ul className="space-y-6 text-gray-700">
           <li>
+            <strong>Digital Library and Resource Center(DLRC):</strong>
+            <a
+              href="https://digitallibrary.fwd.gov.np/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-600 hover:underline ml-2"
+            >
+              Visit Project
+            </a>
+            <p>
+              Developed a responsive user interface using Next.js and Tailwind
+              CSS. Integrated APIs to enable dynamic content management and
+              enhanced functionality for the digital library system.
+            </p>
+          </li>
+          <li>
             <strong>Needy Store Online:</strong>
             <a
               href="https://needystoreonline.com/"
@@ -133,8 +149,8 @@ const Projects: React.FC = () => {
             <strong>Needy Store Online:</strong>
             <p>
               Utilized Supabase for backend services, including database
-              management and authentication to support the e-commerce platform&apos;s
-              functionalities.
+              management and authentication to support the e-commerce
+              platform&apos;s functionalities.
             </p>
           </li>
           <li>
