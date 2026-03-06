@@ -101,7 +101,7 @@ export default function Home() {
                 <div className="relative rounded-[28px] border border-white/15 bg-white/10 p-2 shadow-[0_20px_80px_rgba(0,0,0,0.55)] backdrop-blur-2xl">
                   <div className="overflow-hidden rounded-[22px] border border-white/10">
                     <Image
-                      src="/picC.jpeg"
+                      src="/krijall.jpeg"
                       alt="Profile"
                       width={500}
                       height={620}
