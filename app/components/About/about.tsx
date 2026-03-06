@@ -209,7 +209,7 @@ const About: React.FC = () => {
                 </span>
                 , and qualifying for the{' '}
                 <span className="font-semibold text-slate-800">
-                  Australia Cup
+                  Australia Cup 
                 </span>
                 .
               </p>
