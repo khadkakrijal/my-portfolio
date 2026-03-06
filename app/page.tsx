@@ -1,110 +1,120 @@
 'use client';
-import Link from 'next/link';
-import MasterLayout from './components/masterlayout/master';
+
 import Image from 'next/image';
-import { FaArrowDown, FaArrowRight } from 'react-icons/fa';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { FaArrowRight, FaDownload } from 'react-icons/fa';
+import MasterLayout from './components/masterlayout/master';
 
 export default function Home() {
   return (
     <MasterLayout>
-      <div className="w-full md:h-full md:-mt-0 -mt-[90px] flex items-center justify-center bg-gradient-to-br from-slate-400 via-slate-500 to-slate-600 overflow-hidden">
-        <div className="w-full md:h-full md:flex md:flex-row flex flex-col-reverse ">
-          {/* Left Section */}
-          <div className="md:w-1/2 flex flex-col gap-5 justify-center items-center text-white md:p-6 relative">
-            <h1 className="text-4xl font-extrabold uppercase wave-gradient-animation">
-              Krijal Khadka
-            </h1>
-            <style jsx>{`
-              @keyframes wave {
-                0%,
-                100% {
-                  transform: translateY(0);
-                }
-                50% {
-                  transform: translateY(-10px);
-                }
-              }
+      <section className="relative h-full min-h-[calc(100svh-80px)] w-full overflow-y-auto md:overflow-hidden bg-black">
+        {/* Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.16),transparent_25%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.18),transparent_28%),linear-gradient(to_bottom_right,#020617,#0f172a,#111827)]" />
+        <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:30px_30px]" />
+        <div className="absolute left-1/2 top-1/2 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/10 blur-3xl md:h-[520px] md:w-[520px]" />
 
-              @keyframes gradient {
-                0% {
-                  background-position: 0% 50%;
-                }
-                100% {
-                  background-position: 100% 50%;
-                }
-              }
+        <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-4 py-6 sm:px-6 md:px-10 md:py-0">
+          <div className="grid w-full grid-cols-1 items-center gap-8 md:h-full md:grid-cols-2 md:gap-12">
+            {/* Left */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="flex flex-col justify-center"
+            >
+              <div className="mb-4 mt-2 inline-flex w-fit rounded-full border border-cyan-400/20 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-200 backdrop-blur-xl">
+                Portfolio • Full Stack Developer
+              </div>
 
-              .wave-gradient-animation {
-                display: inline-block;
-                animation:
-                  wave 2s infinite ease-in-out,
-                  gradient 5s infinite linear;
-                background: linear-gradient(90deg, white, teal, cyan, white);
-                background-size: 300% 300%;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-              }
-            `}</style>
-            <div className="text-center space-y-2">
-              <h2 className="text-lg font-semibold uppercase md:flex md:flex-row flex flex-col justify-center items-center md:gap-2 gap-1">
-                Full-Stack Developer{' '}
-                <span className="text-sm font-light">
-                  (React.js, Next.js, Node.js, Express.js)
+              <h1 className="leading-[0.92]">
+                <span className="block bg-gradient-to-r from-white via-cyan-300 to-blue-400 bg-clip-text text-[clamp(2.2rem,7vw,5.4rem)] font-black uppercase tracking-tight text-transparent">
+                  Krijal
                 </span>
-              </h2>
-              <h3 className="text-lg font-medium uppercase flex justify-center items-center gap-3">
-                National Futsal Player (2022){' '}
+                <span className="block bg-gradient-to-r from-cyan-200 via-white to-blue-300 bg-clip-text text-[clamp(2.2rem,7vw,5.4rem)] font-black uppercase tracking-tight text-transparent">
+                  Khadka
+                </span>
+              </h1>
+
+              <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300 sm:text-base md:text-lg">
+                Full-stack developer building modern digital experiences with
+                React.js, Next.js, Node.js, and Express.js.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase sm:text-sm">
+                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-white/90">
+                  React.js
+                </span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-white/90">
+                  Next.js
+                </span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-white/90">
+                  Node.js
+                </span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-white/90">
+                  Express.js
+                </span>
+              </div>
+
+              <div className="mt-5 flex items-center gap-3 text-sm font-medium uppercase text-white/90 sm:text-base">
+                <span>National Futsal Player (2022)</span>
                 <Image
                   src="/nepal logo.jpg"
-                  alt="logo"
-                  width={20}
-                  height={10}
-                  className="object-cover"
+                  alt="Nepal logo"
+                  width={24}
+                  height={24}
+                  className="h-5 w-5 rounded-sm object-cover sm:h-6 sm:w-6"
                 />
-              </h3>
-            </div>
-
-            {/* About Me Button */}
-            <Link
-              href="/about"
-              className="relative group flex justify-center items-center md:ml-0 ml-7 gap-3 w-[230px] py-3 text-l font-bold uppercase text-white bg-blue-600 rounded-full overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
-              <span className="relative z-10 uppercase">About Me</span>
-              <FaArrowRight className="relative z-10 text-white text-xl transition-transform duration-500 group-hover:translate-x-2" />
-            </Link>
-
-            {/* Download Resume Button */}
-
-            <div className="absolute fixed md:block  md:bottom-5 md:-bottom-0 -bottom-20 pb-2 md:flex md:flex-col flex flex-row justify-center items-center md:gap-o gap-2">
-              <div className="relative flex flex-col items-center">
-                <FaArrowDown className="text-white md:text-4xl text-2xl animate-bounce" />
               </div>
-              <a
-                href="/Krijal_resume.pdf"
-  download="Krijal_Khadka_Resume"
-                className="relative flex items-center justify-center w-[230px] py-3 text-l font-semibold text-white bg-blue-600 rounded-full overflow-hidden group"
-              >
-                <span className="z-10 uppercase"> Download Resume</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
-              </a>
-            </div>
-          </div>
 
-          {/* Right Section */}
-          <div className="md:w-1/2 flex justify-center items-center  md:p-0 p-6">
-            <div className="bg-white md:h-[450px] md:w-[450px] rounded-full flex justify-center items-center overflow-hidden">
-              <Image
-                src="/picC.jpeg"
-                alt="Profile"
-                width={450}
-                height={450}
-                className="object-cover"
-              />
-            </div>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href="/about"
+                  className="group inline-flex h-11 items-center justify-center gap-3 rounded-full border border-cyan-400/30 bg-cyan-500/15 px-6 text-sm font-semibold uppercase tracking-wide text-white backdrop-blur-xl transition-all duration-300 hover:scale-[1.03] hover:bg-cyan-500/25 sm:h-12 sm:px-7"
+                >
+                  About Me
+                  <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+
+                <a
+                  href="/Krijal_I.pdf"
+                  download="Krijal_Khadka_Resume"
+                  className="group inline-flex h-11 items-center justify-center gap-3 rounded-full border border-white/15 bg-white/10 px-6 text-sm font-semibold uppercase tracking-wide text-white backdrop-blur-xl transition-all duration-300 hover:scale-[1.03] hover:bg-white/20 sm:h-12 sm:px-7"
+                >
+                  Resume
+                  <FaDownload className="transition-transform duration-300 group-hover:translate-y-[1px]" />
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Right */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="flex items-center justify-center"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 scale-110 rounded-full bg-cyan-400/15 blur-3xl" />
+
+                <div className="relative rounded-[28px] border border-white/15 bg-white/10 p-2 shadow-[0_20px_80px_rgba(0,0,0,0.55)] backdrop-blur-2xl">
+                  <div className="overflow-hidden rounded-[22px] border border-white/10">
+                    <Image
+                      src="/picC.jpeg"
+                      alt="Profile"
+                      width={500}
+                      height={620}
+                      priority
+                      className="h-[260px] w-[260px] object-cover sm:h-[320px] sm:w-[320px] md:h-[58vh] md:w-[min(30vw,420px)]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </section>
     </MasterLayout>
   );
 }
