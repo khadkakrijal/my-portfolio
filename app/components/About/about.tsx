@@ -32,7 +32,7 @@ const About: React.FC = () => {
           <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-xl backdrop-blur-sm">
             <div className="relative mx-auto h-[300px] w-[300px] overflow-hidden rounded-full border-4 border-teal-100 shadow-2xl sm:h-[360px] sm:w-[360px]">
               <Image
-                src="/picB.jpeg"
+                src="/krijall.jpeg"
                 alt="Krijal Khadka"
                 fill
                 className="object-cover"
