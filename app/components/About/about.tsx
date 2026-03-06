@@ -205,7 +205,7 @@ const About: React.FC = () => {
                 <span className="font-semibold text-slate-800">Glenti Cup</span>
                 , the{' '}
                 <span className="font-semibold text-slate-800">
-                  Men's Premier League
+               Men&apos;s Premier League
                 </span>
                 , and qualifying for the{' '}
                 <span className="font-semibold text-slate-800">
