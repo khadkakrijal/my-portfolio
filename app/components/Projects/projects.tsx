@@ -10,6 +10,20 @@ type Project = {
 
 const frontendProjects: Project[] = [
   {
+    title: 'SpectC',
+    link: 'https://www.spectc.app/',
+    description:
+      'Contributed to the frontend development of a real-world project management platform by improving dashboard workflows, Kanban views, release management, burn charts, notifications, rich text formatting, and overall UI/UX reliability. Worked extensively with React, TypeScript, and Tailwind CSS to deliver scalable and user-friendly features.',
+    stack: [
+      'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'UI/UX Improvements',
+      'Kanban',
+      'Data Visualisation',
+    ],
+  },
+  {
     title: 'Chillax FC',
     link: 'https://chillaxfc.vercel.app/',
     description:
@@ -74,6 +88,21 @@ const frontendProjects: Project[] = [
 ];
 
 const backendProjects: Project[] = [
+  {
+    title: 'SpectC',
+    link: 'https://www.spectc.app/',
+    description:
+      'Worked on backend-integrated features for SpectC using Supabase and related services, including Google Calendar sync, Slack notification workflows, authentication improvements, task and release data handling, validation logic, and system reliability fixes. Also contributed to debugging RLS, OAuth, and deployment-related issues in a production-oriented environment.',
+    stack: [
+      'Supabase',
+      'PostgreSQL',
+      'Google Calendar API',
+      'Slack API',
+      'OAuth',
+      'Authentication',
+      'Vercel',
+    ],
+  },
   {
     title: 'Squeaky Klin',
     description:
