@@ -10,6 +10,21 @@ type Project = {
 
 const frontendProjects: Project[] = [
   {
+    title: 'Aquatic Biosecurity Simulation Platform',
+    link: 'https://aquatic-biosecurity.vercel.app/',
+    description:
+      'Designed and developed an interactive biosecurity simulation platform for aquatic pest and disease response training. Built scenario-based simulation flows, stage-by-stage decision prompts, session hosting and joining, lobby/start controls, participant progression, responsive UI, and admin-focused scenario management features. The platform supports realistic preparedness exercises by guiding users through phases, collecting responses, and generating structured feedback based on response quality and key criteria.',
+    stack: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Supabase',
+      'Simulation System',
+      'Admin Panel',
+      'Responsive UI',
+    ],
+  },
+  {
     title: 'SpectC',
     link: 'https://www.spectc.app/',
     description:
@@ -89,6 +104,20 @@ const frontendProjects: Project[] = [
 
 const backendProjects: Project[] = [
   {
+    title: 'Aquatic Biosecurity Simulation Platform',
+    link: 'https://aquatic-biosecurity.vercel.app/',
+    description:
+      'Built backend-integrated functionality using Supabase to support simulation sessions, scenario stages, participant flow, admin-created scenarios, response storage, stage routing, and structured feedback logic. Implemented session-based workflows including host controls, lobby management, simulation start/end handling, and data-driven evaluation features for biosecurity preparedness exercises.',
+    stack: [
+      'Supabase',
+      'PostgreSQL',
+      'Next.js API Routes',
+      'Session Management',
+      'Database Design',
+      'Stage Routing',
+    ],
+  },
+  {
     title: 'SpectC',
     link: 'https://www.spectc.app/',
     description:
@@ -167,7 +196,9 @@ const Section = ({
           className="group rounded-2xl border border-slate-200 bg-white/80 p-6 shadow-md backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
         >
           <div className="mb-4 flex items-start justify-between gap-3">
-            <h3 className="text-xl font-bold text-slate-900">{project.title}</h3>
+            <h3 className="text-xl font-bold text-slate-900">
+              {project.title}
+            </h3>
 
             {project.link && (
               <a
